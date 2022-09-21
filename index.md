@@ -1,3 +1,5 @@
 Homepage of Evergreen Cartoons.
 
-I put various rubbish here.
+Just some being on the internet publishing mediocre code. 
+
+You can see my [Github Profile](https://github.com/EvergreenCartoons) for my work.
