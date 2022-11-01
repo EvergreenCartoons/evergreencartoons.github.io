@@ -36,7 +36,7 @@ When you run the exploit on a target, the first thing you should run is "touch".
 $ python3 exploit.py --target https://192.168.0.241 --mode touch
 (+) Trying to validate the target.
 (+) Correct content-type found. Run '--mode probe'
-{% endhighlight %}
+{% endhighlight %}  
 
 This mode first checks that the target is, in fact, a pfSense appliance by checking for the string "pfSense" in the HTTP response from "GET /".
 
@@ -83,7 +83,7 @@ None
 (+) Checking for our webshell...
 (+) Shell works!
 True
-{% endhighlight &}
+{% endhighlight %}
 
 This means you have to avoid any forward slashes in the Base64 output, which is very annoying. 
 
